@@ -1,0 +1,7 @@
+{
+  "login": "your login",
+  "apiKey":"your API Key",
+  "phone": "your phone number in +71111111111 format",
+  "smsSenderName": "REDSMS.RU",
+  "viberSenderName": "REDSMS.RU"
+}
