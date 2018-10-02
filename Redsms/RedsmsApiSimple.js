@@ -38,8 +38,14 @@ class RedsmsApiSimple {
 
   uploadFile(fileNAME) {
     const methodUrl = 'storage';
-    return this.postFile(methodUrl, fileNAME);
+    // return this.postFile(methodUrl, fileNAME);
+
+    superagent
+      .post(methodUrl)
+      .attach('theFile', fileNAME);
   }
+
+
 
   sendSMS(to, text, from, route = SMS_TYPE)
   {
