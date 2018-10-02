@@ -13,11 +13,14 @@ const redsmsApi = new RedsmsApiSimple(login, apiKey);
 try {
   let sendResult;
   console.log('Send viber message...');
-  redsmsApi
-    .sendSMS(testNumber, 'It is a viber test message.', smsSenderName)
-    .then(
-      res => sendResult = res.body
-    );
+  const path = '/../data/image/REDSMS.png';
+  const files = redsmsApi.uploadFile(path);
+  
+  // redsmsApi
+  //   .sendSMS(testNumber, 'It is a viber test message.', smsSenderName)
+  //   .then(
+  //     res => sendResult = res.body
+  //   );
 } catch (e) {
   console.log('--- e', e);
 }
