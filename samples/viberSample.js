@@ -13,7 +13,7 @@ const redsmsApi = new RedsmsApiSimple(login, apiKey);
 try {
   let sendResult;
   console.log('Send viber message...');
-  const path = '/../data/image/REDSMS.png';
+  const path = '../data/image/REDSMS.png';
   // const files = redsmsApi.uploadFile(path);
   redsmsApi
     .uploadFile(path)

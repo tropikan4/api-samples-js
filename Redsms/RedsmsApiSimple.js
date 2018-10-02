@@ -42,6 +42,7 @@ class RedsmsApiSimple {
 
     return superagent
       .post(methodUrl)
+      .set(this.getHeaders())
       .attach('theFile', fileNAME);
   }
 
