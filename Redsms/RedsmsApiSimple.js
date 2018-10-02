@@ -37,7 +37,7 @@ class RedsmsApiSimple {
   }
 
   uploadFile(fileNAME) {
-    const methodUrl = 'storage';
+    const methodUrl = `${this.apiUrl}/storage`;
     // return this.postFile(methodUrl, fileNAME);
 
     superagent
