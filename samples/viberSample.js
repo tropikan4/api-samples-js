@@ -14,7 +14,13 @@ try {
   let sendResult;
   console.log('Send viber message...');
   const path = '/../data/image/REDSMS.png';
-  const files = redsmsApi.uploadFile(path);
+  // const files = redsmsApi.uploadFile(path);
+  redsmsApi
+    .uploadFile(path)
+    .then(
+      res => console.log('--- res', res),
+      err => console.log('--- err', err)
+    );
   
   // redsmsApi
   //   .sendSMS(testNumber, 'It is a viber test message.', smsSenderName)

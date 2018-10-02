@@ -40,7 +40,7 @@ class RedsmsApiSimple {
     const methodUrl = `${this.apiUrl}/storage`;
     // return this.postFile(methodUrl, fileNAME);
 
-    superagent
+    return superagent
       .post(methodUrl)
       .attach('theFile', fileNAME);
   }
