@@ -42,13 +42,8 @@ try {
     .then(
       res => console.log('--- res', res),
       err => console.log('--- err', err)
-    )
+    );
   
-  // redsmsApi
-  //   .sendSMS(testNumber, 'It is a viber test message.', smsSenderName)
-  //   .then(
-  //     res => sendResult = res.body
-  //   );
 } catch (e) {
   console.log('--- e', e);
 }
