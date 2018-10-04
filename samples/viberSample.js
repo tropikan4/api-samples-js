@@ -18,7 +18,9 @@ try {
   redsmsApi
     .uploadFile(path)
     .then(
-      res => console.log('--- res', res),
+      res => {
+        console.log('--- res.body', res.body)
+      },
       err => console.log('--- err', err)
     );
   
