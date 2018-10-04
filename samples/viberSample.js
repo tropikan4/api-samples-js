@@ -19,7 +19,7 @@ try {
     .uploadFile(path)
     .then(
       res => {
-        const file = res.body.shift();
+        const file = res.body.items.shift();
         const buttonText = 'Кнопка';
         const buttonUrl = 'https://cp.redsms.ru/';
         const textViber = 'Тестовое сообщение';
@@ -27,7 +27,11 @@ try {
         
       },
       err => console.log('--- err', err)
-    );
+    )
+    .then(
+      res => console.log('--- res', res),
+      err => console.log('--- err', err)
+    )
   
   // redsmsApi
   //   .sendSMS(testNumber, 'It is a viber test message.', smsSenderName)
