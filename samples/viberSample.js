@@ -7,6 +7,8 @@ const login = config['login'];
 const apiKey = config['apiKey'];
 const testNumber = config['phone'];
 const smsSenderName = config['smsSenderName'];
+const viberSenderName = config['viberSenderName'];
+
 
 const redsmsApi = new RedsmsApiSimple(login, apiKey);
 
@@ -24,8 +26,7 @@ try {
         const buttonUrl = 'https://cp.redsms.ru/';
         const textViber = 'Тестовое сообщение';
         const imageUrl = file ? file['url'] : '';
-
-
+        
         const data = {
           'to': testNumber,
           'text': textViber,
