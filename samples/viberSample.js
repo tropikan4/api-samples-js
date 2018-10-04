@@ -28,8 +28,8 @@ try {
 
         const data = {
           'to': testNumber,
-          'text': $textViber,
-          'from': $viberSenderName,
+          'text': textViber,
+          'from': viberSenderName,
           'route': RedsmsApiSimple.VIBER_TYPE,
           'viber.btnText': buttonText,
           'viber.btnUrl': buttonUrl,
