@@ -75,7 +75,7 @@ class RedsmsApiSimple {
   }
 
   sendMessage(data) {
-    const methodUrl = 'message';
+    const methodUrl = `${this.apiUrl}/message`;
     return this.sendPost(methodUrl, data);
   }
 

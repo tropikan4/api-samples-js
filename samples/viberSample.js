@@ -34,7 +34,7 @@ try {
       err => console.error('--- err', err)
     )
     .then(
-      res => console.log('--- res', res),
+      res => console.log('--- res.body', res.body),
       err => console.error('--- err', err)
     );
   
