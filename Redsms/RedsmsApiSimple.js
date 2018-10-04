@@ -157,4 +157,7 @@ class RedsmsApiSimple {
   }
 }
 
-module.exports = RedsmsApiSimple;
+module.exports = {
+  RedsmsApiSimple,
+  VIBER_TYPE
+};

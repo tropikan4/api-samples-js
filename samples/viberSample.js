@@ -1,5 +1,7 @@
 const fs = require('fs');
-const RedsmsApiSimple = require('../Redsms/RedsmsApiSimple');
+const { RedsmsApiSimple, VIBER_TYPE } = require('../Redsms/RedsmsApiSimple');
+
+console.log('--- VIBER_TYPE', VIBER_TYPE);
 
 const config = JSON.parse(fs.readFileSync('../config.json', 'utf8'));
 
@@ -31,7 +33,7 @@ try {
           'to': testNumber,
           'text': textViber,
           'from': viberSenderName,
-          'route': RedsmsApiSimple.VIBER_TYPE,
+          'route': VIBER_TYPE,
           'viber.btnText': buttonText,
           'viber.btnUrl': buttonUrl,
           'viber.imageUrl': imageUrl,

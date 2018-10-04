@@ -1,5 +1,5 @@
 const fs = require('fs');
-const RedsmsApiSimple = require('../Redsms/RedsmsApiSimple');
+const { RedsmsApiSimple } = require('../Redsms/RedsmsApiSimple');
 
 const config = JSON.parse(fs.readFileSync('../config.json', 'utf8'));
 
