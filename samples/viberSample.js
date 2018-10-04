@@ -19,7 +19,12 @@ try {
     .uploadFile(path)
     .then(
       res => {
-        console.log('--- res.body', res.body)
+        const file = res.body.shift();
+        const buttonText = 'Кнопка';
+        const buttonUrl = 'https://cp.redsms.ru/';
+        const textViber = 'Тестовое сообщение';
+        const imageUrl = file ? file['url'] : '';
+        
       },
       err => console.log('--- err', err)
     );
