@@ -24,7 +24,17 @@ try {
         const buttonUrl = 'https://cp.redsms.ru/';
         const textViber = 'Тестовое сообщение';
         const imageUrl = file ? file['url'] : '';
-        
+
+
+        const data = {
+          'to': testNumber,
+          'text': $textViber,
+          'from': $viberSenderName,
+          'route': RedsmsApiSimple.VIBER_TYPE,
+          'viber.btnText': buttonText,
+          'viber.btnUrl': buttonUrl,
+          'viber.imageUrl': imageUrl,
+        };
       },
       err => console.log('--- err', err)
     )
