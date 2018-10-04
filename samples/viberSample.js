@@ -1,8 +1,6 @@
 const fs = require('fs');
 const { RedsmsApiSimple, VIBER_TYPE } = require('../Redsms/RedsmsApiSimple');
 
-console.log('--- VIBER_TYPE', VIBER_TYPE);
-
 const config = JSON.parse(fs.readFileSync('../config.json', 'utf8'));
 
 const login = config['login'];
