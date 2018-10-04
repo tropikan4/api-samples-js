@@ -44,9 +44,7 @@ class RedsmsApiSimple {
       .set(this.getHeaders())
       .attach('theFile', fileNAME);
   }
-
-
-
+  
   sendSMS(to, text, from, route = SMS_TYPE)
   {
     const methodUrl = `${this.apiUrl}/message`;

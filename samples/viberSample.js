@@ -13,35 +13,29 @@ const viberSenderName = config['viberSenderName'];
 const redsmsApi = new RedsmsApiSimple(login, apiKey);
 
 try {
-  let sendResult;
   console.log('Send viber message...');
   const path = '../data/image/REDSMS.png';
-  // const files = redsmsApi.uploadFile(path);
   redsmsApi
     .uploadFile(path)
     .then(
       res => {
         const file = res.body.items.shift();
-        const buttonText = 'Кнопка';
-        const buttonUrl = 'https://cp.redsms.ru/';
-        const textViber = 'Тестовое сообщение';
-        const imageUrl = file ? file['url'] : '';
-        
         const data = {
           'to': testNumber,
-          'text': textViber,
+          'text': 'Тестовое сообщение',
           'from': viberSenderName,
           'route': VIBER_TYPE,
-          'viber.btnText': buttonText,
-          'viber.btnUrl': buttonUrl,
-          'viber.imageUrl': imageUrl,
+          'viber.btnText': 'Кнопка',
+          'viber.btnUrl': 'https://cp.redsms.ru/',
+          'viber.imageUrl': file ? file['url'] : '',
         };
+        return redsmsApi.sendMessage(data);
       },
-      err => console.log('--- err', err)
+      err => console.error('--- err', err)
     )
     .then(
       res => console.log('--- res', res),
-      err => console.log('--- err', err)
+      err => console.error('--- err', err)
     );
   
 } catch (e) {
